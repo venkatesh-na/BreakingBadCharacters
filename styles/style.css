@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Convergence&family=Kosugi&family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#041304), to(#010501));
+  background-image: linear-gradient(to bottom right, #041304, #010501);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.root {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.root header {
+  height: 20vh;
+  width: 100%;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.root header .br {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#042e0b), to(#2b7c2b));
+  background-image: linear-gradient(to bottom right, #042e0b, #2b7c2b);
+  outline: 1px solid white;
+  color: white;
+  padding: 0.3rem;
+}
+
+.root header .br::before {
+  content: "35";
+  color: white;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 10px;
+}
+
+.root header .ba {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#2b7c2b), to(#042e0b));
+  background-image: linear-gradient(to bottom right, #2b7c2b, #042e0b);
+  outline: 1px solid white;
+  color: white;
+  padding: 0.3rem;
+}
+
+.root header .ba::before {
+  content: "56";
+  color: white;
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 10px;
+}
+
+.root header .logo {
+  position: relative;
+  height: 84px;
+}
+
+.root header .logo > h1:nth-child(2) {
+  position: absolute;
+  position: absolute;
+  left: 47px;
+  top: 47px;
+}
+
+.root section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.root section .search {
+  width: 100%;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.root section .search input {
+  width: 40%;
+  height: 2.5rem;
+  padding-left: 1rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  background-color: rgba(128, 128, 128, 0.26);
+  color: white;
+}
+
+.root section .search input:focus {
+  -webkit-box-shadow: 2px 2px 5px 2px black;
+          box-shadow: 2px 2px 5px 2px black;
+}
+
+.root section .characters {
+  width: 80%;
+  margin: 2rem;
+}
+
+.root section .characters .innerCharacter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.characters .innerCharacter .card {
+  -webkit-animation: pop 0.3s ease-in 1;
+          animation: pop 0.3s ease-in 1;
+  overflow: hidden;
+  width: 260px;
+  height: 350px;
+  position: relative;
+  margin: 0.3rem;
+}
+
+.characters .innerCharacter .card > div:nth-child(1) {
+  width: 100%;
+  height: 100%;
+}
+
+.characters .innerCharacter .card > div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.characters .innerCharacter .card .characterName {
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  opacity: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#111111));
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), #111111);
+}
+
+.characters .innerCharacter .card .characterName h1 {
+  color: white;
+}
+
+.characters .innerCharacter .card .characterName h5 {
+  color: rgba(255, 255, 255, 0.555);
+  margin: 0.6rem 0;
+}
+
+.characters .innerCharacter .card .characterName button {
+  border: none;
+  color: #2b7c2b;
+  outline: 1.5px solid #2b7c2b;
+  background: transparent;
+  padding: 5px 15px;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.characters .innerCharacter .card .characterName button:hover {
+  background-color: #2b7c2b69;
+}
+
+.characters .innerCharacter .card .characterName button:active {
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.characters .innerCharacter .card .moreInfo {
+  position: absolute;
+  top: 0;
+  -webkit-transform: translateY(-110px);
+          transform: translateY(-110px);
+  opacity: 0;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0)), to(#111111));
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), #111111);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.characters .innerCharacter .card .moreInfo p {
+  color: rgba(255, 255, 255, 0.753);
+  padding: 1rem;
+}
+
+.characters .innerCharacter .card:hover .characterName {
+  opacity: 1;
+}
+
+.characters .innerCharacter .card:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.down {
+  -webkit-transform: translateY(0px) !important;
+          transform: translateY(0px) !important;
+  opacity: 1 !important;
+}
+
+@-webkit-keyframes pop {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes pop {
+  from {
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .root section .characters {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .root section .search input {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

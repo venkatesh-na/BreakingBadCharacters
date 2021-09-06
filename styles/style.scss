@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Convergence&family=Kosugi&family=Roboto&display=swap");
+@mixin withHieght() {
+  width: 100%;
+  height: 100%;
+}
+@mixin center($direction, $justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(4, 19, 4),
+    rgb(1, 5, 1)
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.root {
+  width: 100%;
+  @include center(column, center, center);
+  header {
+    height: 20vh;
+    width: 100%;
+    color: white;
+    @include center(row, center, center);
+    .br {
+      position: relative;
+      background-image: linear-gradient(
+        to bottom right,
+        rgb(4, 46, 11),
+        rgb(43, 124, 43)
+      );
+      outline: 1px solid white;
+      color: white;
+      padding: 0.3rem;
+      &::before {
+        content: "35";
+        color: white;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        font-size: 10px;
+      }
+    }
+    .ba {
+      position: relative;
+      background-image: linear-gradient(
+        to bottom right,
+        rgb(43, 124, 43),
+        rgb(4, 46, 11)
+      );
+      outline: 1px solid white;
+      color: white;
+      padding: 0.3rem;
+      &::before {
+        content: "56";
+        color: white;
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        font-size: 10px;
+      }
+    }
+    .logo {
+      position: relative;
+      height: 84px;
+      > h1:nth-child(2) {
+        position: absolute;
+        position: absolute;
+        left: 47px;
+        top: 47px;
+      }
+    }
+  }
+  section {
+    @include center(column, center, center);
+    width: 100%;
+    .search {
+      width: 100%;
+      height: 10vh;
+      @include center(row, center, center);
+      input {
+        width: 40%;
+        height: 2.5rem;
+        padding-left: 1rem;
+        border-radius: 1rem;
+        outline: none;
+        border: none;
+        background-color: rgba(128, 128, 128, 0.26);
+        color: white;
+        &:focus {
+          box-shadow: 2px 2px 5px 2px black;
+        }
+      }
+    }
+    .characters {
+      width: 80%;
+      margin: 2rem;
+      .innerCharacter {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
+.characters .innerCharacter .card {
+  animation: pop 0.3s ease-in 1;
+  overflow: hidden;
+  width: 260px;
+  height: 350px;
+  position: relative;
+  margin: 0.3rem;
+  > div:nth-child(1) {
+    @include withHieght();
+    img {
+      @include withHieght();
+      transition: all 0.5s linear;
+    }
+  }
+  .characterName {
+    transition: all 0.5s linear;
+    @include center(column, space-between, none);
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0),
+      rgb(17, 17, 17)
+    );
+    h1 {
+      color: white;
+    }
+    h5 {
+      color: rgba(255, 255, 255, 0.555);
+      margin: 0.6rem 0;
+    }
+    button {
+      border: none;
+      color: #2b7c2b;
+      outline: 1.5px solid #2b7c2b;
+      background: transparent;
+      padding: 5px 15px;
+      transition: all 0.5s linear;
+      &:hover {
+        background-color: #2b7c2b69;
+      }
+      &:active {
+        transform: scale(0.8);
+      }
+    }
+  }
+  .moreInfo {
+    position: absolute;
+    top: 0;
+    transform: translateY(-110px);
+    opacity: 0;
+    background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      rgb(17, 17, 17)
+    );
+    p {
+      color: rgba(255, 255, 255, 0.753);
+      padding: 1rem;
+    }
+    transition: all 0.5s ease-out;
+  }
+  &:hover .characterName {
+    opacity: 1;
+  }
+  &:hover img {
+    transform: scale(1.1);
+  }
+}
+.down {
+  transform: translateY(0px) !important;
+  opacity: 1 !important;
+}
+@keyframes pop {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .root section .characters {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .root section .search input {
+    width: 80%;
+  }
+}
