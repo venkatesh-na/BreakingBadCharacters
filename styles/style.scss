@@ -16,6 +16,14 @@
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
 }
+:root
+{
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(4, 19, 4),
+    rgb(1, 5, 1)
+  );
+}
 body {
   width: 100vw;
   overflow-x: hidden;
