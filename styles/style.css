@@ -9,7 +9,7 @@
 }
 :root
 {
-  background-color:linear-gradient(to bottom right, #041304, #010501);
+  background-image:linear-gradient(to bottom right, #041304, #010501);
 }
 body {
   width: 100vw;
